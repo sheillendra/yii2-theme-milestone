@@ -1,0 +1,21 @@
+{
+    "name": "sheillendra/yii2-theme-milestone",
+    "description": "milestone",
+    "keywords": ["milestone", "sheillendra", "yii2", "yii"],
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "Sheillendra",
+            "email": "suryana869@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/font-awesome": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "sheillendra\\milestone\\": ""
+        }
+    }
+}
