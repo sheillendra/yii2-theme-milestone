@@ -8,7 +8,7 @@ $loginMilestoneAsset = LoginMilestoneAsset::register($this);
 
 <?php $this->beginPage() ?>
 <!doctype html>
-<html lang="en">
+<html lang="<?= Yii::$app->language ?>">
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,7 @@ $loginMilestoneAsset = LoginMilestoneAsset::register($this);
         <meta name="apple-mobile-web-app-title" content="Milestone">
 
         <meta name="theme-color" content="#4C7FF0">
+        <?= Html::csrfMetaTags() ?>
         <title><?php echo Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>

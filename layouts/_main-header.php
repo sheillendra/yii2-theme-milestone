@@ -13,7 +13,7 @@
             <!-- /logo -->
         </div>
         <a class="navbar-item navbar-spacer-right navbar-heading hidden-md-down" href="#">
-            <span>Dashboard</span>
+            <span><?php echo $this->title?></span>
         </a>
         <div class="navbar-search navbar-item">
             <form class="search-form">

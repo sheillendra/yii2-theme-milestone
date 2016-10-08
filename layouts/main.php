@@ -7,7 +7,7 @@ $milestoneAsset = MilestoneAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!doctype html>
-<html lang="en">
+<html lang="<?= Yii::$app->language ?>">
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@ $milestoneAsset = MilestoneAsset::register($this);
         <!--<link rel="stylesheet" href="vendor/pace/themes/blue/pace-theme-minimal.css"/>-->
         <!--<link rel="stylesheet" href="vendor/animate.css/animate.css"/>-->
         <!-- endbuild -->
-
+        <?= Html::csrfMetaTags() ?>
         <title><?php echo Html::encode($this->title) ?></title>
         <?php $this->head() ?>
 
@@ -51,7 +51,16 @@ $milestoneAsset = MilestoneAsset::register($this);
                 <!-- /top header -->
 
                 <!-- main area -->
-                <?php echo $this->render('@app/views/layouts/_main-content', ['content' => $content, 'milestoneAsset' => $milestoneAsset]); ?>
+                <div class="main-content">
+                    <div class="content-view">
+                        <?php echo $this->render('@app/views/layouts/_main-content', ['content' => $content, 'milestoneAsset' => $milestoneAsset]); ?>
+                    </div>
+                    <!-- bottom footer -->
+                    <div class="content-footer">
+                        <?php echo $this->render('@app/views/layouts/_main-footer', ['milestoneAsset' => $milestoneAsset]); ?>
+                    </div>
+                    <!-- /bottom footer -->
+                </div>
                 <!-- /main area -->
             </div>
             <!-- /content panel -->
