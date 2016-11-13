@@ -14,7 +14,6 @@ class BootstrapAsset extends AssetBundle {
     ];
     public $depends = [
         'yii\web\JqueryAsset',
-        'sheillendra\milestone\assets\TetherAsset'
+        'sheillendra\milestone\assets\TetherAsset',
     ];
-    //public $publishOptions=['forceCopy'=>YII_DEBUG];
 }

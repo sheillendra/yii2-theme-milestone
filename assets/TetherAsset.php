@@ -13,5 +13,4 @@ class TetherAsset extends AssetBundle {
     public $depends = [
         'yii\web\JqueryAsset',
     ];
-    //public $publishOptions=['forceCopy'=>YII_DEBUG];
 }
