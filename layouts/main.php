@@ -5,9 +5,12 @@ use sheillendra\milestone\assets\MilestoneAsset;
 
 $milestoneAsset = MilestoneAsset::register($this);
 ?>
+
+<?php echo $this->render('@app/views/layouts/_init_view') ?>
+
 <?php $this->beginPage() ?>
-<!doctype html>
-<html lang="<?= Yii::$app->language ?>">
+<!DOCTYPE html>
+<html lang="<?php echo Yii::$app->language ?>">
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +27,8 @@ $milestoneAsset = MilestoneAsset::register($this);
 
         <meta name="theme-color" content="#4C7FF0">
 
+        <link rel="shortcut icon" href="<?php echo $this->params['favico'] ?>">
+
         <!-- page stylesheets -->
         <!--<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css"/>-->
         <!-- end page stylesheets -->
@@ -33,7 +38,7 @@ $milestoneAsset = MilestoneAsset::register($this);
         <!--<link rel="stylesheet" href="vendor/pace/themes/blue/pace-theme-minimal.css"/>-->
         <!--<link rel="stylesheet" href="vendor/animate.css/animate.css"/>-->
         <!-- endbuild -->
-        <?= Html::csrfMetaTags() ?>
+        <?php echo Html::csrfMetaTags() ?>
         <title><?php echo Html::encode($this->title) ?></title>
         <?php $this->head() ?>
 
