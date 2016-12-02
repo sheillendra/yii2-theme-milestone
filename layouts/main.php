@@ -1,13 +1,15 @@
 <?php
 
 use yii\helpers\Html;
-use sheillendra\milestone\assets\MilestoneAsset;
-
-$milestoneAsset = MilestoneAsset::register($this);
 ?>
 
 <?php echo $this->render('@app/views/layouts/_init_view') ?>
 
+<?php
+//$mainAsset = $this->params['mainAsset'];
+//$milestoneAsset = $mainAsset::register($this);
+$milestoneAsset = $this->params['mainAsset']::register($this);
+?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?php echo Yii::$app->language ?>">
