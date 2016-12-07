@@ -5,12 +5,12 @@ namespace sheillendra\milestone\assets;
 use yii\web\AssetBundle;
 
 class BootstrapAsset extends AssetBundle {
-    public $sourcePath = '@sheillendra/milestone/assets/template/vendor/bootstrap/dist';
+    public $sourcePath = '@sheillendra/milestone/assets/template';
     public $css = [
-        'css/bootstrap.min.css'
+        'vendor/bootstrap/dist/css/bootstrap.min.css'
     ];
     public $js = [
-        'js/bootstrap.min.js'
+        'vendor/bootstrap/dist/js/bootstrap.min.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
